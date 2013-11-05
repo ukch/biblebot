@@ -33,3 +33,19 @@ class Tweeter(object):
         for dt in self.get_relevant_dates(today):
             tweeted += self.send_tweets(dt)
         return tweeted
+
+
+class _DebugApi(list):
+
+    def PostUpdate(self, data):
+        self.append(data)
+
+
+class DebugTweeter(Tweeter):
+
+    def __init__(self):
+        self.api = _DebugApi()
+
+    def tweet_all(self):
+        super(DebugTweeter, self).tweet_all()
+        return list(self.api)
