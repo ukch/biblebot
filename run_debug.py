@@ -10,10 +10,10 @@ if __name__ == '__main__':
     data = subprocess.check_output([heroku, 'config'])
     for line in data.strip().split(os.linesep)[1:]:
         try:
-            key, value = line.split(': ')
+            key, value = line.split(':')
         except ValueError:
             print line
             raise
-        os.environ[key] = value
+        os.environ[key] = value.strip()
     app.debug = True
     app.run()

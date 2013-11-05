@@ -1,9 +1,19 @@
 from datetime import date#, timedelta
 
+import twitter
+
 from biblebot.constants import TEMPLATE
 from biblebot.data import readings
 
+
 class Tweeter(object):
+
+    def __init__(self, consumer_key, consumer_secret, access_token_key,
+                 access_token_secret):
+        self.api = twitter.Api(consumer_key=consumer_key,
+                               consumer_secret=consumer_secret,
+                               access_token_key=access_token_key,
+                               access_token_secret=access_token_secret)
 
     def get_relevant_dates(self, until):
         # TODO proper date range
@@ -14,7 +24,7 @@ class Tweeter(object):
     def send_tweets(self, dt):
         tweets = readings.get(dt.month, {}).get(dt.day)
         for tweet in tweets:
-            print TEMPLATE.format(tweet)
+            self.api.PostUpdate(TEMPLATE.format(tweet))
         return len(tweets)
 
     def tweet_all(self):
