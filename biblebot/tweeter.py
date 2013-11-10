@@ -41,7 +41,7 @@ class Tweeter(object):
         start_date = self.last_tweeted_date + one_day
         end_date = until + one_day
         for n in xrange(int((end_date - start_date).days)):
-            yield last_tweeted_date + timedelta(n)
+            yield start_date + timedelta(n)
 
     def send_tweets(self, dt):
         tweets = readings.get(dt.month, {}).get(dt.day)

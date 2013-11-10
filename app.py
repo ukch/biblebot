@@ -1,4 +1,7 @@
 import os
+import sys
+import traceback
+
 from flask import Flask, request, abort
 
 from biblebot.tweeter import DebugTweeter, Tweeter, PickleFileDoesNotExist
@@ -41,4 +44,7 @@ def cron():
             return func(force_today=force_today)
         except PickleFileDoesNotExist:
             return 'Unable to calculate date of last tweet'
+        except:
+            traceback.print_exc(file=sys.stderr)
+            raise
     abort(401)
