@@ -4,7 +4,7 @@ import traceback
 
 from flask import Flask, request, abort
 
-from biblebot.tweeter import DebugTweeter, Tweeter, PickleFileDoesNotExist
+from biblebot.tweeter import DebugTweeter, Tweeter, LastTweetedDateNotSet
 
 app = Flask(__name__)
 
@@ -42,7 +42,7 @@ def cron():
             func = tweet_all
         try:
             return func(force_today=force_today)
-        except PickleFileDoesNotExist:
+        except LastTweetedDateNotSet:
             return 'Unable to calculate date of last tweet'
         except:
             traceback.print_exc(file=sys.stderr)

@@ -8,3 +8,5 @@ gunicorn==18.0
 itsdangerous==0.23
 wsgiref==0.1.2
 https://github.com/bear/python-twitter/archive/master.zip
+redis==2.8.0
+python-dateutil==2.2

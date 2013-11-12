@@ -1,14 +1,14 @@
-import cPickle
+from store import redis
 from datetime import date, timedelta
-import os
 
+from dateutil.parser import parse as dateutil_parse
 import twitter
 
-from biblebot.constants import TEMPLATE, LAST_TWEETED_FILENAME
+from biblebot.constants import TEMPLATE
 from biblebot.data import readings
 
 
-class PickleFileDoesNotExist(Exception):
+class LastTweetedDateNotSet(Exception):
     pass
 
 
@@ -23,16 +23,15 @@ class Tweeter(object):
 
     def _get_last_tweeted(self):
         if not hasattr(self, '_last_tweeted_date'):
-            if not os.path.exists(LAST_TWEETED_FILENAME):
-                raise PickleFileDoesNotExist(LAST_TWEETED_FILENAME)
-            with open(LAST_TWEETED_FILENAME) as fh:
-                self._last_tweeted_date = cPickle.load(fh)
+            data = redis.get('last_tweeted_date')
+            if data is None:
+                raise LastTweetedDateNotSet()
+            self._last_tweeted_date = dateutil_parse(data).date()
         return self._last_tweeted_date
 
     def _set_last_tweeted(self, value):
         self._last_tweeted_date = value
-        with open(LAST_TWEETED_FILENAME, 'w') as fh:
-            cPickle.dump(value, fh)
+        redis.set('last_tweeted_date', value)
 
     last_tweeted_date = property(_get_last_tweeted, _set_last_tweeted)
 

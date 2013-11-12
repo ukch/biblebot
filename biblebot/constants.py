@@ -12,5 +12,4 @@ NOVEMBER = 11
 DECEMBER = 12
 
 
-LAST_TWEETED_FILENAME = 'last_tweeted.pickle'
 TEMPLATE = '{} #DailyBibleReading #DailyBibleReadings'
