@@ -43,7 +43,7 @@ class Tweeter(object):
             yield start_date + timedelta(n)
 
     def send_tweets(self, dt):
-        tweets = readings.get(dt.month, {}).get(dt.day)
+        tweets = readings.get(dt.month, {}).get(dt.day, ())
         for tweet in tweets:
             self.api.PostUpdate(TEMPLATE.format(tweet))
         return len(tweets)
