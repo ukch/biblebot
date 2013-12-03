@@ -1,10 +1,11 @@
-from store import redis
 from datetime import date, timedelta
+import urllib
 
 from dateutil.parser import parse as dateutil_parse
+from store import redis
 import twitter
 
-from biblebot.constants import TEMPLATE
+from biblebot.constants import TEMPLATE, SHORT_TEMPLATE, URL_PATTERN
 from biblebot.data import readings
 
 
@@ -45,7 +46,17 @@ class Tweeter(object):
     def send_tweets(self, dt):
         tweets = readings.get(dt.month, {}).get(dt.day, ())
         for tweet in tweets:
-            self.api.PostUpdate(TEMPLATE.format(tweet))
+            if not tweet.startswith('>'):
+                # para.ms doesn't handle whitespace properly
+                urlsafe_tweet = urllib.quote(tweet.replace(' ', ''))
+                url = URL_PATTERN.format(urlsafe_tweet)
+                tweet = '{} {}'.format(tweet, url)
+            final_tweet = TEMPLATE.format(tweet)
+            if len(final_tweet) > 140:
+                final_tweet = SHORT_TEMPLATE.format(tweet)
+                if len(final_tweet) > 140:
+                    final_tweet = tweet
+            self.api.PostUpdate(final_tweet)
         return len(tweets)
 
     def tweet_all(self, force_today=False):

@@ -13,3 +13,5 @@ DECEMBER = 12
 
 
 TEMPLATE = '{} #DailyBibleReading #DailyBibleReadings'
+SHORT_TEMPLATE = '{} #DailyBibleReadings'
+URL_PATTERN = 'http://para.ms/bible/{}'
