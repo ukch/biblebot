@@ -39,7 +39,7 @@ readings = {
         3: ('>Dan 11:1', '>1 Jn 4:6', 'Psalm 137'),
         4: ('>Dan 11:35', '>1 Jn 4:21', 'Ps 138'),
         5: ('>Dan 12:13', '>1 Jn 5:21', 'Ps 139'),
-        6: ('Haggai 1-2 2', 'John 1', '>Prov 29:27'),
+        6: ('Haggai 1-2', '2 John 1', '>Prov 29:27'),
         7: ('Zechariah 1-4', '3 John 1'),
         8: ('Zechariah 5-8', 'Jude 1'),
         9: ('Zechariah 9-11', 'Revelation 1:1-20', 'Ps 140'),
