@@ -59,8 +59,11 @@ class Tweeter(object):
             self.api.PostUpdate(final_tweet)
         return len(tweets)
 
+    def get_today(self):
+        return date.today()
+
     def tweet_all(self, force_today=False):
-        today = date.today()
+        today = self.get_today()
         tweeted = 0
         if force_today:
             # We use force_today to forcibly set last_tweeted_date
@@ -85,6 +88,14 @@ class DebugTweeter(Tweeter):
     def __init__(self):
         self.api = _DebugApi()
 
+    def get_today(self):
+        if self.force_day:
+            return self.force_day
+        return super(DebugTweeter, self).get_today()
+
     def tweet_all(self, *args, **kwargs):
+        self.force_day = kwargs.pop('force_day', None)
+        if self.force_day is not None:
+            kwargs['force_today'] = True
         super(DebugTweeter, self).tweet_all(*args, **kwargs)
         return list(self.api)
