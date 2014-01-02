@@ -1,3 +1,5 @@
+import sys
+
 from biblebot.constants import *
 
 __all__ = ['old_testament', 'new_testament', 'psalms', 'proverbs', 'readings']
@@ -16,7 +18,7 @@ old_testament[JANUARY] = {
     6: 'Gen 11:10-13',
     7: 'Gen 14-16',
     8: 'Gen 17-18',
-    9: 'Gen 19:-20',
+    9: 'Gen 19-20',
     10: 'Gen 21-23',
     11: 'Gen 24',
     12: 'Gen 25-26',
@@ -140,7 +142,7 @@ old_testament[FEBRUARY] = {
 }
 
 new_testament[FEBRUARY] = {
-    1: 'Matthew 21:28-Matthew 21:32',
+    1: 'Matthew 21:28-21:32',
     2: '> Mt 22:14',
     3: '> Mt 22:46',
     4: '> Mt 23:19',
@@ -193,14 +195,52 @@ proverbs[FEBRUARY] = {
 }
 
 
+def _split_reference(reference):
+    return reference.split(' ', 1)
+
+
+def _end_ref_from_reading(reading):
+    """Get the last reference from the reading text
+    Example: if reading text is 'John 1:1-3:16', this function will return
+    'John 3:16'
+    """
+    if reading.startswith('>'):
+        return reading[1:].strip()
+    if '-' in reading:
+        first_ref, second_ref = reading.split('-', 1)
+        book, unused = _split_reference(first_ref)
+        return '{} {}'.format(book.strip(), second_ref.strip())
+    return reading
+
+
+def _strip_book(reference):
+    """Strip the book name from the reference
+    Example: If reference is 'John 3:16', this function will return '3:16'
+    """
+    return _split_reference(reference)[1]
+
+
+def _get_reading(dic, day):
+    """Format the reading using the last reading, if necessary"""
+    orig_reading = reading = dic[day]
+    if '__last__' in dic:
+        last = dic['__last__']
+        if reading.startswith('>'):
+            reading = '{}-{}'.format(_end_ref_from_reading(last),
+                                     _strip_book(reading[1:].strip()))
+    dic['__last__'] = orig_reading
+    return reading
+
+
 def _format_readings(month):
     data = {}
     for day in xrange(1, len(old_testament[month])):
-        reading = [old_testament[month][day], new_testament[month][day]]
+        reading = [_get_reading(old_testament[month], day),
+                   _get_reading(new_testament[month], day)]
         if day in psalms[month]:
-            reading.append(psalms[month][day])
+            reading.append(_get_reading(psalms[month], day))
         if day in proverbs[month]:
-            reading.append(proverbs[month][day])
+            reading.append(_get_reading(proverbs[month], day))
         data[day] = tuple(reading)
     return data
 
@@ -209,3 +249,14 @@ readings = {
     JANUARY: _format_readings(JANUARY),
     FEBRUARY: _format_readings(FEBRUARY),
 }
+
+if __name__ == "__main__":
+    from pprint import pprint
+    try:
+        month = int(sys.argv[1])
+    except (IndexError, ValueError):
+        month = None
+    if month and month in readings:
+        pprint(readings[month])
+    else:
+        pprint(readings)
