@@ -194,6 +194,194 @@ proverbs[FEBRUARY] = {
     25: 'Pr 6:1-11',
 }
 
+old_testament[MARCH] = {
+    1: 'Lev 5:14-7:10',
+    2: '>Lev 8:36',
+    3: '>Lev 10:20',
+    4: '>Lev 12:8',
+    5: '>Lev 13:59',
+    6: '>Lev 14:57',
+    7: '>Lev 16:34',
+    8: '>Lev 18:30',
+    9: '>Lev 20:27',
+    10: '>Lev 22:33',
+    11: '>Lev 24:23',
+    12: '>Lev 26:13',
+    13: '>Lev 27:34',
+    14: '>Num 2:9',
+    15: '>Num 3:51',
+    16: '>Num 5:10',
+    17: '>Num 6:27',
+    18: '>Num 7:65',
+    19: '>Num 9:14',
+    20: '>Num 11:3',
+    21: '>Num 13:25',
+    22: '>Num 14:45',
+    23: '>Num 16:35',
+    24: '>Num 18:32',
+    25: '>Num 21:3',
+    26: '>Num 22:20',
+    27: '>Num 23:26',
+    28: '>Num 26:11',
+    29: '>Num 27:11',
+    30: '>Num 29:11',
+    31: '>Num 31:24',
+}
+
+new_testament[MARCH] = {
+    1: 'Mk 10:32-52',
+    2: '>Mk 11:25',
+    3: '>Mk 12:12',
+    4: '>Mk 12:27',
+    5: '>Mk 12:44',
+    6: '>Mk 13:31',
+    7: '>Mk 14:16',
+    8: '>Mk 14:42',
+    9: '>Mk 14:72',
+    10: '>Mk 15:32',
+    11: '>Mk 15:47',
+    12: '>Mk 16:20',
+    13: '>Lk 1:25',
+    14: '>Lk 1:38',
+    15: '>Lk 1:56',
+    16: '>Lk 1:80',
+    17: '>Lk 2:20',
+    18: '>Lk 2:40',
+    19: '>Lk 2:52',
+    20: '>Lk 3:22',
+    21: '>Lk 4:13',
+    22: '>Lk 4:37',
+    23: '>Lk 5:16',
+    24: '>Lk 5:32',
+    25: '>Lk 6:11',
+    26: '>Lk 6:36',
+    27: '>Lk 7:10',
+    28: '>Lk 7:35',
+    29: '>Lk 7:50',
+    30: '>Lk 8:18',
+    31: '>Lk 8:39',
+}
+
+psalms[MARCH] = {
+    2: 'Ps 28',
+    3: 'Ps 29',
+    4: 'Ps 30',
+    7: 'Ps 31',
+    11: 'Ps 32',
+    12: 'Ps 33',
+    15: 'Ps 34',
+    18: 'Ps 35',
+    22: 'Ps 36',
+    23: 'Ps 37',
+    28: 'Ps 38',
+    31: 'Ps 39',
+}
+
+proverbs[MARCH] = {
+    1: 'Prov 6:12-19',
+    5: 'Prov 6:20-29',
+    9: 'Prov 6:30-35',
+    13: 'Prov 7:1-5',
+    17: 'Prov 7:6-20',
+    21: 'Prov 7:21-27',
+    25: 'Prov 8:1-11',
+    29: 'Prov 8:12-21',
+}
+
+old_testament[APRIL] = {
+    1: 'Num 31:25-32:42',
+    2: '>Num 34:29',
+    3: '>Num 36:13',
+    4: '>Deut 2:23',
+    5: '>Deut 4:14',
+    6: '>Deut 5:33',
+    7: '>Deut 8:20',
+    8: '>Deut 10:22',
+    9: '>Deut 12:32',
+    10: '>Deut 14:29',
+    11: '>Deut 16:20',
+    12: '>Deut 18:22',
+    13: '>Deut 20:20',
+    14: '>Deut 22:30',
+    15: '>Deut 25:19',
+    16: '>Deut 28:14',
+    17: '>Deut 28:68',
+    18: '>Deut 30:10',
+    19: '>Deut 31:29',
+    20: '>Deut 32:52',
+    21: '>Deut 34:12',
+    22: '>Josh 2:24',
+    23: '>Josh 5:12',
+    24: '>Josh 7:26',
+    25: '>Josh 9:15',
+    26: '>Josh 10:43',
+    27: '>Josh 12:24',
+    28: '>Josh 14:15',
+    29: '>Josh 16:10',
+    30: '>Josh 18:28',
+}
+
+new_testament[APRIL] = {
+    1: 'Lk 8:40-9:9',
+    2: '>Lk 9:27',
+    3: '>Lk 9:56',
+    4: '>Lk 10:24',
+    5: '>Lk 11:4',
+    6: '>Lk 11:32',
+    7: '>Lk 11:54',
+    8: '>Lk 12:34',
+    9: '>Lk 12:59',
+    10: '>Lk 13:30',
+    11: '>Lk 14:14',
+    12: '>Lk 14:35',
+    13: '>Lk 15:32',
+    14: '>Lk 16:18',
+    15: '>Lk 17:10',
+    16: '>Lk 17:37',
+    17: '>Lk 18:30',
+    18: '>Lk 19:10',
+    19: '>Lk 19:44',
+    20: '>Lk 20:26',
+    21: '>Lk 21:4',
+    22: '>Lk 21:38',
+    23: '>Lk 22:38',
+    24: '>Lk 22:62',
+    25: '>Lk 23:25',
+    26: '>Lk 23:56',
+    27: '>Lk 24:35',
+    28: '>Lk 24:53',
+    29: '>Jn 1:28',
+    30: '>Jn 1:51',
+}
+
+psalms[APRIL] = {
+    1: 'Ps 40',
+    4: 'Ps 41',
+    7: 'Ps 42',
+    9: 'Ps 43',
+    11: 'Ps 44',
+    13: 'Ps 45',
+    16: 'Ps 46',
+    17: 'Ps 47',
+    19: 'Ps 48',
+    21: 'Ps 49',
+    23: 'Ps 50',
+    25: 'Ps 51',
+    28: 'Ps 52',
+    29: 'Ps 53',
+}
+
+proverbs[APRIL] = {
+    2: 'Prov 8:22-31',
+    6: 'Prov 8:36',
+    10: 'Prov 9:1-12',
+    14: 'Prov 9:13-18',
+    18: 'Prov 10:1-10',
+    22: 'Prov 10:11-20',
+    26: 'Prov 10:21-30',
+    30: 'Prov 10:31-11:8',
+}
+
 
 def _split_reference(reference):
     return reference.split(' ', 1)
@@ -234,7 +422,7 @@ def _get_reading(dic, day):
 
 def _format_readings(month):
     data = {}
-    for day in xrange(1, len(old_testament[month])):
+    for day in xrange(1, len(old_testament[month]) + 1):
         reading = [_get_reading(old_testament[month], day),
                    _get_reading(new_testament[month], day)]
         if day in psalms[month]:
@@ -248,6 +436,8 @@ def _format_readings(month):
 readings = {
     JANUARY: _format_readings(JANUARY),
     FEBRUARY: _format_readings(FEBRUARY),
+    MARCH: _format_readings(MARCH),
+    APRIL: _format_readings(APRIL),
 }
 
 if __name__ == "__main__":
