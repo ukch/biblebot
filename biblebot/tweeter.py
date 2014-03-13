@@ -74,7 +74,7 @@ class Tweeter(object):
                 else:
                     break
             else:
-                raise RuntimeError("All shorteners flagged as spam")
+                raise RuntimeError("All shorteners flagged as malware")
         return len(tweets)
 
     def get_today(self):
