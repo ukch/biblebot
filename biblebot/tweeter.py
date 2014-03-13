@@ -64,6 +64,7 @@ class Tweeter(object):
                 except twitter.TwitterError, e:
                     try:
                         data, = e.args
+                        data, = data
                     except ValueError:
                         raise e
                     # 'Status contains malware'
