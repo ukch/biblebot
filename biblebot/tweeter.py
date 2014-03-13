@@ -1,12 +1,13 @@
 from datetime import date, timedelta
-import urllib
+import logging
 
 from dateutil.parser import parse as dateutil_parse
 from store import redis
 import twitter
 
-from biblebot.constants import TEMPLATE, SHORT_TEMPLATE, URL_PATTERN
+from biblebot.constants import TEMPLATE, SHORT_TEMPLATE
 from biblebot.data import readings
+from biblebot.url_service import URL_SHORTENERS
 
 
 class LastTweetedDateNotSet(Exception):
@@ -43,20 +44,36 @@ class Tweeter(object):
         for n in xrange(int((end_date - start_date).days)):
             yield start_date + timedelta(n)
 
+    def try_send_tweet(self, tweet, url_shortener):
+        if not tweet.startswith('>'):
+            url = url_shortener.get_url(tweet)
+            tweet = '{} {}'.format(tweet, url)
+        final_tweet = TEMPLATE.format(tweet)
+        if len(final_tweet) > 140:
+            final_tweet = SHORT_TEMPLATE.format(tweet)
+            if len(final_tweet) > 140:
+                final_tweet = tweet
+        self.api.PostUpdate(final_tweet)
+
     def send_tweets(self, dt):
         tweets = readings.get(dt.month, {}).get(dt.day, ())
         for tweet in tweets:
-            if not tweet.startswith('>'):
-                # para.ms doesn't handle whitespace properly
-                urlsafe_tweet = urllib.quote(tweet.replace(' ', ''))
-                url = URL_PATTERN.format(urlsafe_tweet)
-                tweet = '{} {}'.format(tweet, url)
-            final_tweet = TEMPLATE.format(tweet)
-            if len(final_tweet) > 140:
-                final_tweet = SHORT_TEMPLATE.format(tweet)
-                if len(final_tweet) > 140:
-                    final_tweet = tweet
-            self.api.PostUpdate(final_tweet)
+            for url_shortener in URL_SHORTENERS:
+                try:
+                    self.try_send_tweet(tweet, url_shortener)
+                except twitter.TwitterError, e:
+                    try:
+                        data, = e.args
+                    except ValueError:
+                        raise e
+                    # 'Status contains malware'
+                    if data.get("code") == 188:
+                        msg = "URL shortener '{}' flagged as malware"
+                        logging.warn(msg.format(url_shortener.URL_PATTERN))
+                else:
+                    break
+            else:
+                raise RuntimeError("All shorteners flagged as spam")
         return len(tweets)
 
     def get_today(self):
