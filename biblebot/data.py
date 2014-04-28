@@ -382,6 +382,192 @@ proverbs[APRIL] = {
     30: 'Prov 10:31-11:8',
 }
 
+old_testament[MAY] = {
+    1: 'Jos 19-21:19',
+    2: '>Jos 22:34',
+    3: '>Jos 24:33',
+    4: '>Jdg 2:5',
+    5: '>Jdg 3:31',
+    6: '>Jdg 5:31',
+    7: '>Jdg 7:8a',
+    8: '>Jdg 8:35',
+    9: '>Jdg 9:57',
+    10: '>Jdg 11:40',
+    11: '>Jdg 13:25',
+    12: '>Jdg 15:20',
+    13: '>Jdg 17:13',
+    14: '>Jdg 19:30',
+    15: '>Jdg 21:25',
+    16: 'Ruth 1:1-2:23',
+    17: '>Ruth 4:22',
+    18: '1 Sam 1:1-2:26',
+    19: '>1 Sam 4:22',
+    20: '>1 Sam 7:17',
+    21: '>1 Sam 10:8',
+    22: '>1 Sam 12:25',
+    23: '>1 Sam 14:23',
+    24: '>1 Sam 15:35',
+    25: '>1 Sam 17:37',
+    26: '>1 Sam 18:30',
+    27: '>1 Sam 20:42',
+    28: '>1 Sam 23:29',
+    29: '>1 Sam 25:44',
+    30: '>1 Sam 28:25',
+    31: '>1 Sam 31:13',
+}
+
+new_testament[MAY] = {
+    1: 'Jn 2:1-25',
+    2: '>Jn 3:21',
+    3: '>Jn 3:36',
+    4: '>Jn 4:26',
+    5: '>Jn 4:42',
+    6: '>Jn 5:15',
+    7: '>Jn 5:30',
+    8: '>Jn 5:47',
+    9: '>Jn 6:24',
+    10: '>Jn 6:59',
+    11: '>Jn 7:13',
+    12: '>Jn 7:44',
+    13: '>Jn 8:11',
+    14: '>Jn 8:30',
+    15: 'Jn 8:31-59',
+    16: '>Jn 9:34',
+    17: '>Jn 10:21',
+    18: '>Jn 10:42',
+    19: '>Jn 11:44',
+    20: '>Jn 12:11',
+    21: '>Jn 12:36',
+    22: '>Jn 13:17',
+    23: '>Jn 13:38',
+    24: '>Jn 14:31',
+    25: '>Jn 16:4',
+    26: '>Jn 17:5',
+    27: '>Jn 17:26',
+    28: '>Jn 18:24',
+    29: '>Jn 18:40',
+    30: '>Jn 19:27',
+    31: '>Jn 20:9',
+}
+
+psalms[MAY] = {
+    1: 'Ps 54',
+    2: 'Ps 55',
+    5: 'Ps 56',
+    6: 'Ps 57',
+    9: 'Ps 58',
+    10: 'Ps 59',
+    13: 'Ps 60',
+    15: 'Ps 61',
+    17: 'Ps 62',
+    18: 'Ps 63',
+    19: 'Ps 64',
+    21: 'Ps 65',
+    22: 'Ps 66',
+    25: 'Ps 67',
+    26: 'Ps 68',
+}
+
+proverbs[MAY] = {
+    4: 'Prov 11:9-18',
+    8: 'Prov 11:19-28',
+    12: '>Prov 12:7',
+    16: 'Prov 12:8-17',
+    20: 'Prov 12:18-27',
+    24: 'Prov 12:28-13:9',
+    28: 'Prov 13:10-19',
+}
+
+old_testament[JUNE] = {
+    1: '2 Sam 1:1-2:7',
+    2: '> 2 Sam 3:21',
+    3: '> 2 Sam 5:5',
+    4: '> 2 Sam 6:23',
+    5: '> 2 Sam 8:18',
+    6: '> 2 Sam 10:19',
+    7: '> 2 Sam 12:31',
+    8: '> 2 Sam 13:39',
+    9: '> 2 Sam 15:12',
+    10: '> 2 Sam 16:14',
+    11: '> 2 Sam 18:18',
+    12: '> 2 Sam 19:43',
+    13: '> 2 Sam 21:22',
+    14: '> 2 Sam 23:7',
+    15: '> 2 Sam 24:25',
+    16: '1 Kings 1:1-2:12',
+    17: '>1 Kings 3:15',
+    18: '>1 Kings 5:18',
+    19: '>1 Kings 7:22',
+    20: '>1 Kings 8:21',
+    21: '>1 Kings 9:9',
+    22: '>1 Kings 11:13',
+    23: '>1 Kings 12:24',
+    24: '>1 Kings 14:20',
+    25: '>1 Kings 16:7',
+    26: '>1 Kings 18:15',
+    27: '>1 Kings 19:21',
+    28: '>1 Kings 21:29',
+    29: '>1 Kings 22:53',
+    30: '2 Kings 1:1-2:25',
+}
+
+new_testament[JUNE] = {
+    1: 'Jn 20:10-31',
+    2: '>Jn 21:25',
+    3: 'Acts 1:1-22',
+    4: '>Acts 2:21',
+    5: '>Acts 2:47',
+    6: '>Acts 3:26',
+    7: '>Acts 4:22',
+    8: '>Acts 5:11',
+    9: '>Acts 5:42',
+    10: '>Acts 7:19',
+    11: '>Acts 7:43',
+    12: '>Acts 8:3',
+    13: '>Acts 8:40',
+    14: '>Acts 9:31',
+    15: '>Acts 10:23a',
+    16: '>Acts 11:18',
+    17: '>Acts 12:19a',
+    18: '>Acts 13:12',
+    19: '>Acts 13:41',
+    20: '>Acts 14:7',
+    21: '>Acts 14:28',
+    22: '>Acts 15:21',
+    23: '>Acts 15:41',
+    24: '>Acts 16:15',
+    25: '>Acts 16:40',
+    26: '>Acts 17:21',
+    27: '>Acts 18:8',
+    28: '>Acts 19:13',
+    29: '>Acts 19:41',
+    30: '>Acts 20:38',
+}
+
+psalms[JUNE] = {
+    2: 'Ps 69',
+    6: 'Ps 70',
+    7: 'Ps 71',
+    11: 'Ps 72',
+    12: 'Ps 73',
+    15: 'Ps 74',
+    19: 'Ps 75',
+    20: 'Ps 76',
+    22: 'Ps 77',
+    24: 'Ps 78',
+}
+
+proverbs[JUNE] = {
+    1: 'Prov 13:20-14:4',
+    5: 'Prov 14:5-14',
+    9: 'Prov 14:15-24',
+    13: 'Prov 14:25-35',
+    17: 'Prov 15:1-10',
+    21: 'Prov 15:11-20',
+    25: 'Prov 15:21-30',
+    29: '>Prov 16:7',
+}
+
 
 def _split_reference(reference):
     return reference.split(' ', 1)
@@ -391,12 +577,19 @@ def _end_ref_from_reading(reading):
     """Get the last reference from the reading text
     Example: if reading text is 'John 1:1-3:16', this function will return
     'John 3:16'
+    >>> _end_ref_from_reading('John 1:1-3:16')
+    'John 3:16'
+    >>> _end_ref_from_reading('John 1:1-2')
+    'John 1:2'
     """
     if reading.startswith('>'):
         return reading[1:].strip()
     if '-' in reading:
         first_ref, second_ref = reading.split('-', 1)
-        book, unused = _split_reference(first_ref)
+        book, remainder = _split_reference(first_ref)
+        if ":" in remainder and ":" not in second_ref:
+            second_ref = "{}:{}".format(
+                remainder.split(":")[1], second_ref.strip())
         return '{} {}'.format(book.strip(), second_ref.strip())
     return reading
 
@@ -404,6 +597,8 @@ def _end_ref_from_reading(reading):
 def _strip_book(reference):
     """Strip the book name from the reference
     Example: If reference is 'John 3:16', this function will return '3:16'
+    >>> _strip_book('John 3:16')
+    '3:16'
     """
     return _split_reference(reference)[1]
 
@@ -438,6 +633,8 @@ readings = {
     FEBRUARY: _format_readings(FEBRUARY),
     MARCH: _format_readings(MARCH),
     APRIL: _format_readings(APRIL),
+    MAY: _format_readings(MAY),
+    JUNE: _format_readings(JUNE),
 }
 
 if __name__ == "__main__":
