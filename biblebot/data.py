@@ -581,6 +581,8 @@ def _end_ref_from_reading(reading):
     'John 3:16'
     >>> _end_ref_from_reading('John 1:1-2')
     'John 1:2'
+    >>> _end_ref_from_reading('John 8:31-59')
+    'John 8:59'
     """
     if reading.startswith('>'):
         return reading[1:].strip()
@@ -589,7 +591,7 @@ def _end_ref_from_reading(reading):
         book, remainder = _split_reference(first_ref)
         if ":" in remainder and ":" not in second_ref:
             second_ref = "{}:{}".format(
-                remainder.split(":")[1], second_ref.strip())
+                remainder.split(":")[0], second_ref.strip())
         return '{} {}'.format(book.strip(), second_ref.strip())
     return reading
 
@@ -599,6 +601,8 @@ def _strip_book(reference):
     Example: If reference is 'John 3:16', this function will return '3:16'
     >>> _strip_book('John 3:16')
     '3:16'
+    >>> _strip_book('Jn 8:31-59')
+    '8:31-59'
     """
     return _split_reference(reference)[1]
 
