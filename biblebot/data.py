@@ -570,7 +570,7 @@ proverbs[JUNE] = {
 
 
 def _split_reference(reference):
-    return reference.split(' ', 1)
+    return reference.rsplit(' ', 1)
 
 
 def _end_ref_from_reading(reading):
@@ -603,6 +603,8 @@ def _strip_book(reference):
     '3:16'
     >>> _strip_book('Jn 8:31-59')
     '8:31-59'
+    >>> _strip_book('>1 Sam 7:17')
+    '7:17'
     """
     return _split_reference(reference)[1]
 

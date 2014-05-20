@@ -33,7 +33,7 @@ class VrefUrlShortener(UrlShortener):
         # More than one chapter
         if tweet.count(":") == 2:
             beginning, end = tweet.split("-")
-            book, beginning = beginning.split()
+            book, beginning = beginning.rsplit(" ", 1)
             beginning_chap, unused = beginning.split(":")
             end_chap, unused = end.split(":")
             full_refs = [
