@@ -848,6 +848,113 @@ proverbs[SEPTEMBER] = {
     29: '>Prov 24:4',
 }
 
+old_testament[OCTOBER] = {
+    1: 'Jer 2:30-4:9',
+    2: '>Jer 5:31',
+    3: '>Jer 7:29',
+    4: '>Jer 9:16',
+    5: '>Jer 11:17',
+    6: '>Jer 13:27',
+    7: '>Jer 15:21',
+    8: '>Jer 17:27',
+    9: '>Jer 20:18',
+    10: '>Jer 23:8',
+    11: '>Jer 25:14',
+    12: '>Jer 26:24',
+    13: '>Jer 29:23',
+    14: '>Jer 31:14',
+    15: '>Jer 32:25',
+    16: '>Jer 34:22',
+    17: '>Jer 37:21 ',
+    18: '>Jer 40:6',
+    19: '>Jer 42:22 ',
+    20: '>Jer 45:5',
+    21: '>Jer 47:7',
+    22: '>Jer 49:6',
+    23: '>Jer 50:10',
+    24: '>Jer 51:14',
+    25: '>Jer 51:64',
+    26: '>Jer 52:34',
+    27: 'Habakkuk 1-3',
+    28: 'Lamentations 1:1-2:6',
+    29: '>Lam 3:39',
+    30: '>Lam 5:22',
+    31: 'Obadiah',
+}
+
+new_testament[OCTOBER] = {
+    1: 'Philippians 2:12-30',
+    2: '>Phil 4:1',
+    3: '>Phil 4:23',
+    4: 'Colossians 1:1:23',
+    5: '> Col 2:5',
+    6: '>Col 2:23',
+    7: '>Col 4:1',
+    8: '>Col 4:18',
+    9: '1 Thessalonians 1:1-2:16',
+    10: '>1 Thess 3:13',
+    11: '>1 Thess 4:18',
+    12: '>1 Thess 5:28',
+    13: '2 Thess 1:1-12',
+    14: '>2 Thess 2:17',
+    15: '>2 Thess 3:18',
+    16: '1 Timothy 1:1-20',
+    17: '>1 Tim 2:15',
+    18: '>1 Tim 3:16',
+    19: '>1 Tim 4:16',
+    20: '>1 Tim 6:2',
+    21: '>1 Tim 6:21',
+    22: '2 Tim 1:1-18',
+    23: '>2 Tim 2:26',
+    24: '>2 Tim 3:17',
+    25: '>2 Tim 4:22',
+    26: 'Titus 1:1-16',
+    27: '>Titus 2:15',
+    28: '>Titus 3:15',
+    29: 'Philemon',
+    30: 'Heb 1:1-14',
+    31: '>Heb 2:18',
+}
+
+psalms[OCTOBER] = {
+    2: 'Ps 116',
+    5: 'Ps 117',
+    6: 'Ps 118',
+    9: '>Ps 119:32',
+    10: '>Ps 119:64',
+    11: '>Ps 119:96',
+    12: '>Ps 119:128',
+    13: '>Ps 119:160',
+    14: '>Ps 119:176',
+}
+
+proverbs[OCTOBER] = {
+    3: 'Prov 24:5-14',
+    7: '>Prov 24:22',
+    16: '>Prov 24:34',
+    19: '>Prov 25:10',
+    22: '>Prov 25:20',
+    25: '>Prov 26:2',
+    28: '>Prov 26:12',
+    31: '>Prov 26:22',
+}
+
+#old_testament[NOVEMBER] = 
+
+#new_testament[NOVEMBER] = 
+
+#psalms[NOVEMBER] = 
+
+#proverbs[NOVEMBER] = 
+
+#old_testament[DECEMBER] = 
+
+#new_testament[DECEMBER] = 
+
+#psalms[DECEMBER] = 
+
+#proverbs[DECEMBER] = 
+
 
 def _split_reference(reference):
     return reference.rsplit(' ', 1)
@@ -924,6 +1031,9 @@ readings = {
     JULY: _format_readings(JULY),
     AUGUST: _format_readings(AUGUST),
     SEPTEMBER: _format_readings(SEPTEMBER),
+    OCTOBER: _format_readings(OCTOBER),
+    #NOVEMBER: _format_readings(NOVEMBER),
+    #DECEMBER: _format_readings(DECEMBER),
 }
 
 if __name__ == "__main__":
