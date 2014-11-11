@@ -942,7 +942,7 @@ proverbs[OCTOBER] = {
 old_testament[NOVEMBER] = {
     1: 'Joel 1:1-2:17',
     2: '>Joel 3:21',
-    3: 'Eze 1:1-3:27',
+    3: 'Ezekiel 1:1-3:27',
     4: '>Eze 6:14',
     5: '>Eze 9:11',
     6: '>Eze 12:28',
@@ -965,7 +965,7 @@ old_testament[NOVEMBER] = {
     23: '>Eze 44:31',
     24: '>Eze 46:24',
     25: '>Eze 48:35',
-    26: '>Dan 2:23',
+    26: 'Daniel 1:1-2:23',
     27: '>Dan 3:12',
     28: '>Dan 4:18',
     29: '>Dan 5:16',
@@ -973,7 +973,7 @@ old_testament[NOVEMBER] = {
 }
 
 new_testament[NOVEMBER] = {
-    1: 'Heb 3:1-19',
+    1: 'Hebrews 3:1-19',
     2: '>Heb 4:13',
     3: '>Heb 5:10',
     4: '>Heb 6:12',
@@ -994,7 +994,7 @@ new_testament[NOVEMBER] = {
     19: 'James 3',
     20: 'James 4',
     21: 'James 5',
-    22: '>1 Pet 2:3',
+    22: '1 Peter 1:1-2:3',
     23: '>1 Pet 2:25',
     24: '>1 Pet 3:22',
     25: '>1 Pet 4:19',
@@ -1002,7 +1002,7 @@ new_testament[NOVEMBER] = {
     27: '2 Peter 1',
     28: '2 Peter 2',
     29: '2 Peter 3',
-    30: '>1 Jn 2:11',
+    30: '1 John 1:1-2:11',
 }
 
 psalms[NOVEMBER] = {
@@ -1035,13 +1035,101 @@ proverbs[NOVEMBER] = {
     28: '>Prov 29:9',
 }
 
-#old_testament[DECEMBER] = 
+old_testament[DECEMBER] = {
+    1: 'Dan 7:1-8:14',
+    2: '>Dan 9:19',
+    3: '>Dan 11:1',
+    4: '>Dan 11:35',
+    5: '>Dan 12:13',
+    6: 'Haggai',
+    7: 'Zechariah 1-4',
+    8: 'Zechariah 5-8',
+    9: 'Zechariah 9-11',
+    10: 'Zechariah 12-14',
+    11: 'Esther 1:1-2:18',
+    12: '>Esther 5:14',
+    13: '>Esther 8:17',
+    14: '>Esther 10:3',
+    15: 'Malachi 1-2:16',
+    16: 'Malachi 2:17-4:6',
+    17: 'Ezra 1:1-2:67',
+    18: '>Ezra 4:5',
+    19: '>Ezra 5:17',
+    20: '>Ezra 7:10',
+    21: '>Ezra 8:14',
+    22: '>Ezra 9:15',
+    23: '>Ezra 10:44',
+    24: 'Nehemiah 1:1-2:20',
+    25: '>Neh 4:23',
+    26: '>Neh 7:3',
+    27: '>Neh 8:18',
+    28: '>Neh 9:37',
+    29: '>Neh 11:21',
+    30: '>Neh 12:47',
+    31: '>Neh 13:31',
+}
 
-#new_testament[DECEMBER] = 
+new_testament[DECEMBER] = {
+    1: '1 Jn 2:12-27',
+    2: '>1 Jn 3:10',
+    3: '>1 Jn 4:6',
+    4: '>1 Jn 4:21',
+    5: '>1 Jn 5:21',
+    6: '2 John',
+    7: '3 John',
+    8: 'Jude',
+    9: 'Revelation 1:1-20',
+    10: '>Rev 2:17',
+    11: '>Rev 3:6',
+    12: '>Rev 3:22',
+    13: '>Rev 4:11',
+    14: '>Rev 5:14',
+    15: '>Rev 6:17',
+    16: '>Rev 7:17',
+    17: '>Rev 9:12',
+    18: '>Rev 10:11',
+    19: '>Rev 11:19',
+    20: '>Rev 13:1a',
+    21: '>Rev 13:18',
+    22: '>Rev 14:13',
+    23: '>Rev 15:8',
+    24: '>Rev 16:21',
+    25: '>Rev 17:18',
+    26: '>Rev 18:17a',
+    27: '>Rev 19:10',
+    28: '>Rev 19:21',
+    29: '>Rev 20:15',
+    30: '>Rev 21:27',
+    31: '>Rev 22:21',
+}
 
-#psalms[DECEMBER] = 
+psalms[DECEMBER] = {
+    3: 'Ps 137',
+    4: 'Ps 138',
+    5: 'Ps 139',
+    9: 'Ps 140',
+    12: 'Ps 141',
+    13: 'Ps 142',
+    15: 'Ps 143',
+    16: 'Ps 144',
+    19: 'Ps 145',
+    23: 'Ps 146',
+    24: 'Ps 147',
+    27: 'Ps 148',
+    29: 'Ps 149',
+    31: 'Ps 150',
+}
 
-#proverbs[DECEMBER] = 
+proverbs[DECEMBER] = {
+    2: 'Prov 29:10-18',
+    6: '>Prov 29:27',
+    10: '>Prov 30:10',
+    14: '>Prov 30:23',
+    18: '>Prov 30:33',
+    22: '>Prov 31:9',
+    26: '>Prov 31:20',
+    30: '>Prov 31:31',
+}
 
 
 def _split_reference(reference):
@@ -1120,8 +1208,8 @@ readings = {
     AUGUST: _format_readings(AUGUST),
     SEPTEMBER: _format_readings(SEPTEMBER),
     OCTOBER: _format_readings(OCTOBER),
-    #NOVEMBER: _format_readings(NOVEMBER),
-    #DECEMBER: _format_readings(DECEMBER),
+    NOVEMBER: _format_readings(NOVEMBER),
+    DECEMBER: _format_readings(DECEMBER),
 }
 
 if __name__ == "__main__":
