@@ -15,11 +15,6 @@ class UrlShortener(object):
         return self.URL_PATTERN.format(safe_tweet)
 
 
-class ParamsUrlShortener(UrlShortener):
-
-    URL_PATTERN = 'http://para.ms/bible/{}'
-
-
 class VrefUrlShortener(UrlShortener):
 
     """
@@ -48,4 +43,4 @@ class VrefUrlShortener(UrlShortener):
         return super(VrefUrlShortener, self).format_tweet(tweet)
 
 
-URL_SHORTENERS = [ParamsUrlShortener(), VrefUrlShortener()]
+URL_SHORTENERS = [VrefUrlShortener()]
