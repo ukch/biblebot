@@ -15,6 +15,15 @@ class UrlShortener(object):
         return self.URL_PATTERN.format(safe_tweet)
 
 
+class ReflyUrlShortener(UrlShortener):
+
+    URL_PATTERN = 'http://ref.ly/{}'
+
+    def format_tweet(self, tweet):
+        tweet = tweet.replace(":", ".")
+        return super(ReflyUrlShortener, self).format_tweet(tweet)
+
+
 class VrefUrlShortener(UrlShortener):
 
     """
@@ -43,4 +52,4 @@ class VrefUrlShortener(UrlShortener):
         return super(VrefUrlShortener, self).format_tweet(tweet)
 
 
-URL_SHORTENERS = [VrefUrlShortener()]
+URL_SHORTENERS = [ReflyUrlShortener(), VrefUrlShortener()]
