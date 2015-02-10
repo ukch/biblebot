@@ -116,7 +116,7 @@ old_testament[FEBRUARY] = {
     3: 'Job 30-32',
     4: 'Job 33-34',
     5: 'Job 35-37',
-    6: 'Job 38:40:2',
+    6: 'Job 38-40:2',
     7: 'Job 40-42',
     8: 'Exodus 1-3',
     9: 'Ex 4-6:12',
